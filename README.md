@@ -31,7 +31,7 @@ This is a console-based implementation of the classic Solitaire card game.
 1. **Clone the project**:
     ```sh
     git clone https://github.com/Mahad-Saffi/Klondike-Solitaire.git
-    cd solitaire-game
+    cd Klondike-Solitaire
     ```
 
 2. **Build the project**:
