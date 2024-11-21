@@ -26,11 +26,11 @@ This is a console-based implementation of the classic Solitaire card game.
 - Use the number keys (1-9) to select an action from the menu.
 - Follow the prompts to enter the necessary indices for the selected action.
 
-## Building and Running
+## Building and Running (cmd)
 
 1. **Clone the project**:
     ```sh
-    git clone https://github.com/yourusername/solitaire-game.git
+    git clone https://github.com/Mahad-Saffi/Klondike-Solitaire.git
     cd solitaire-game
     ```
 
@@ -41,7 +41,7 @@ This is a console-based implementation of the classic Solitaire card game.
 
 3. **Run the executable**:
     ```sh
-    ./Solitaire.exe
+    Solitaire.exe
     ```
 
 ## Dependencies
