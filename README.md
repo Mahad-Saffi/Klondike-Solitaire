@@ -41,7 +41,7 @@ This is a console-based implementation of the classic Solitaire card game.
 
 3. **Run the executable**:
     ```sh
-    Solitaire.exe
+    .\Solitaire.exe
     ```
 
 ## Dependencies
