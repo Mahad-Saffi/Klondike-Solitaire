@@ -66,15 +66,6 @@ void printDataAtXY(int x, int y, const std::string& data) {
     std::cout << "=> " << data;
 }
 
-void printPersistentInstructions(int x, int y) {
-    setCursorPosition(x, y);
-    std::cout << "=> Press D to deselect the card";
-    setCursorPosition(x, y + 1);
-    std::cout << "=> Press S to switch between Dark and Light mode";
-    setCursorPosition(x, y + 2);
-    std::cout << "=> Press ESC to exit the game";
-}
-
 void clearOutputArea(int x, int y, int lines) {
     for (int i = 0; i < lines; ++i) {
         setCursorPosition(x, y + i);
@@ -333,7 +324,6 @@ void GameLoop() {
 
         updatePositions(game, TableauPositions, FoundationPositions, AdditionalPilesPositions);
         while (true) {
-            printPersistentInstructions(80, 12);
             try {
                 int elapsedTime = std::chrono::duration_cast<std::chrono::seconds>(std::chrono::steady_clock::now() - startTime).count();
                 setCursorPosition(95, 4);

@@ -235,6 +235,15 @@ public:
         return true;
     }
 
+    void printPersistentInstructions(int x, int y) const {
+        setCursorPosition(x, y);
+        std::cout << "=> Press D to deselect the card";
+        setCursorPosition(x, y + 1);
+        std::cout << "=> Press S to switch between Dark and Light mode";
+        setCursorPosition(x, y + 2);
+        std::cout << "=> Press ESC to exit the game";
+    }
+
     void displayGame() const {
         setCursorPosition(0, 3);
         std::cout << "Stock Pile =>";
@@ -262,6 +271,7 @@ public:
 
         setCursorPosition(95, 2);
         std::cout << "Move Count: " << moveCount;
+        printPersistentInstructions(80, 12);
     }
 
     std::string displayHint() {
