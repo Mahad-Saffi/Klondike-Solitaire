@@ -111,4 +111,8 @@ public:
             }
         }
     }
+
+    const Stack& getCards() const {
+        return cards;
+    }
 };

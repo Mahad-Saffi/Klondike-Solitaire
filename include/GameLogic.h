@@ -21,7 +21,6 @@ private:
     std::array<FoundationPile, 4> foundationPiles;
     std::array<TableauPile, 7> tableauPiles;
     int moveCount;
-    std::chrono::time_point<std::chrono::steady_clock> startTime;
 
     bool isValidTableauMove(const Card& card, const Card& target) {
         // Different color (red/black) and one rank lower
@@ -98,9 +97,6 @@ public:
         while(!deck.isEmpty()) {
             stockPile.addCard(deck.dealCard());
         }
-
-        // Start the clock
-        startTime = std::chrono::steady_clock::now();
     }
 
     void drawCard() {
@@ -264,11 +260,8 @@ public:
             tableauPiles[i].displayTopCard(10*i,10);
         }
 
-        int elapsedTime = std::chrono::duration_cast<std::chrono::seconds>(std::chrono::steady_clock::now() - startTime).count();
         setCursorPosition(95, 2);
         std::cout << "Move Count: " << moveCount;
-        setCursorPosition(95, 4);
-        std::cout << "Time: " << elapsedTime << " seconds";
     }
 
     std::string displayHint() {
@@ -328,4 +321,8 @@ public:
     const StockPile& getStockPile() const { return stockPile; }
 
     const WastePile& getWastePile() const { return wastePile; }
+
+    const std::array<FoundationPile, 4>& getFoundationPiles() const { return foundationPiles; }
+
+    const std::array<TableauPile, 7>& getTableauPiles() const { return tableauPiles; }
 };
