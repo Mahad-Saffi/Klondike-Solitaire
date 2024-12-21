@@ -6,7 +6,6 @@ This is a console-based implementation of the classic Solitaire card game.
 
 - Move cards between different piles (Stock, Waste, Tableau, Foundation)
 - Display the current game state
-- Display hints for possible moves
 - Check if the game is won
 
 ## How to Play
@@ -18,23 +17,24 @@ This is a console-based implementation of the classic Solitaire card game.
 5. **Move card from Foundation to Tableau**: Move the top card from a Foundation pile to a Tableau pile.
 6. **Move card between Tableaus**: Move the top card from one Tableau pile to another.
 7. **Move multiple cards between Tableaus**: Move multiple cards from one Tableau pile to another.
-8. **Display Hint**: Display a hint for a possible move.
-9. **Exit**: Exit the game.
+8. **Exit**: Exit the game.
 
 ## Controls
 
-- Use the number keys (1-9) to select an action from the menu.
-- Follow the prompts to enter the necessary indices for the selected action.
+- Click on a card to move it! the selected card will be highlighted.
+- Press `D` to deselect the card.
+- Press `S` to switch to a different game theme.
+- Press `Esc` to exit the game.
 
 ## Building and Running (cmd)
 
 1. **Clone the project**:
     ```sh
     git clone https://github.com/Mahad-Saffi/Klondike-Solitaire.git
-    cd solitaire-game
+    cd Klondike-Solitaire
     ```
 
-2. **Build the project**:
+2. **Build the project (Optional)**:
     ```sh
     g++ Solitaire.cpp -o Solitaire.exe
     ```
